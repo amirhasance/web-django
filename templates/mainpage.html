@@ -1,10 +1,31 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script>
+        function f() {
+            document.getElementById("1").innerText = "hello amir"
+            var x = 9 ;
+            for ( var i = 0 ; i < x ; i++)
+            {
+                document.write(" i  =  " ) ; document.write(i);
+                document.write("\n")
+                console.log("amir amir \n")
+            }
+
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href=" {% static "change_background_color.css" %}" />
+    <img src="{% static "myaks.jpg"%}"  onclick="f()"/>
+
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<div id = "1">
+hello welcome
+</div>
 </body>
 </html>
