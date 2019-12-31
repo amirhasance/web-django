@@ -1,11 +1,12 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Login </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{% static "loggin/images/icons/favicon.ico"%}"/>
 <!--===============================================================================================-->
@@ -28,8 +29,20 @@
 	<link rel="stylesheet" type="text/css" href="{% static "loggin/css/util.css" %}">
 	<link rel="stylesheet" type="text/css" href= "{% static "loggin/css/main.css" %}">
 <!--===============================================================================================-->
+
+
+
+ <style>
+body {
+  background-image: url("{% static "backgroundImage.jpg" %}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
 </head>
-<body>
+<body >
+
 
 	<div class="limiter">
 		<div class="container-login100">
@@ -46,33 +59,36 @@
 						<input class="input100" type="text" name="email">
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
+                    {% block pass %}
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
 						<input class="input100" type="password" name="pass">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
-
+                    {% endblock %}
+                   {% block login %}
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button class="login100-form-btn"  >
 								Login
 							</button>
 						</div>
 					</div>
-
+                    {% endblock %}
+                    {% block SingUp %}
 					<div class="text-center p-t-115">
-						<span class="txt1">
+						<span class="txt1"><div class="bg"></div>
 							Don’t have an account?
 						</span>
 
-						<a class="txt2" href="https://www.google.com">
+						<a class="txt2" href="signup">
 							Sign Up
 						</a>
 					</div>
+                    {% endblock %}
 				</form>
 			</div>
 		</div>

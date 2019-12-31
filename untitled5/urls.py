@@ -20,6 +20,6 @@ from mysite import urls
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('mysite/', include('mysite.urls') ,),
+    path('mysite/', include('mysite.urls') ),
 
 ]

@@ -7,4 +7,5 @@ class usersInfo(models.Model):
 
 
 
+
 # Create your models here.

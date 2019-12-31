@@ -7,3 +7,10 @@ def mainpage(request ):
 def login(request):
 
     return render (request  = request , template_name=  "login.html")
+
+
+def testF(request):
+    return render(request = request , template_name= "tsting.html" , context= dictt)
+
+def signup(request):
+    return render(request =request , template_name="SignUp.html")

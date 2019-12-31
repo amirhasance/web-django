@@ -1,16 +1,6 @@
 
-  @media screen and (min-width: 0px) and (max-width: 900px) {
-    body{
-      background-color: #F00;
-    }
-  }
-  @media screen and (min-width: 901px) and (max-width: 1500px) {
-    body{
-      background-color: #FF0;
-    }
-  }
-  @media screen and (min-width: 1501px) {
-    body{
-      background-color: #0F0;
-    }
-  }
+body
+{background-image: url("backgroundImage.jpg" );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%; }

@@ -3,7 +3,10 @@ from .views import  *
 urlpatterns = [
 
  path ('login' , login ),
- path( 'mainpage' , mainpage )
+ path('signup' , signup ),
+ path( 'mainpage' , mainpage ),
+ path('test' , testF),
+
 
 
 
